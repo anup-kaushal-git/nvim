@@ -1,0 +1,7 @@
+require('core.basics')
+require('core.plugins')
+require('core.plugin_config.nvim_tree')
+require('core.plugin_config.themes')
+require('core.plugin_config.lualine')
+require('core.plugin_config.lsp_config')
+require('core.plugin_config.completion')
