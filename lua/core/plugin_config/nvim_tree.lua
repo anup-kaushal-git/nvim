@@ -13,12 +13,14 @@ require("nvim-tree").setup({
   view = {
     signcolumn = "yes",
     float = {
-      enable = false,
+      enable = true,
       quit_on_focus_loss = true,
       open_win_config = {
         relative = "editor",
         border = "rounded",
-        width = 40,
+        width = 50,
+        row = 1,
+        col = 1,
       },
     },
   },
@@ -76,9 +78,9 @@ require("nvim-tree").setup({
     },
   },
   diagnostics = {
-    enable = false,
-        show_on_dirs = false,
-        show_on_open_dirs = true,
+    enable = true,
+        show_on_dirs = true,
+        show_on_open_dirs = false,
         debounce_delay = 50,
         severity = {
           min = vim.diagnostic.severity.HINT,
@@ -98,10 +100,5 @@ vim.keymap.set('n', '<C-q>', ':NvimTreeToggle<CR>')
 vim.keymap.set('i', '<C-q>', '<ESC> :NvimTreeToggle<CR>')
 vim.keymap.set('v', '<C-q>', '<ESC> :NvimTreeToggle<CR>')
 
--- autoclosing Nvim-tree when opening file
- --vim.api.nvim_create_autocmd({"BufLeave"}, {
-  --pattern = {"NvimTree_1"},
-  --callback = function() vim.cmd("NvimTreeClose") end,
---})
 
 
