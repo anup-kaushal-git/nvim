@@ -18,6 +18,8 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use 'Shatur/neovim-ayu'
+  use({ 'rose-pine/neovim', as = 'rose-pine' })
+
   use {
   'nvim-lualine/lualine.nvim',
   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
